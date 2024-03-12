@@ -1,0 +1,61 @@
+<div class="wrapper mt-3">
+    <div class="title-text">
+        <div class="title signup">Login Form</div>
+    </div>
+    <div class="form-container">
+        <div class="slide-controls">
+            <label for="signup" class="slide signup text-white">Login Details</label>
+        </div>
+        <div class="form-inner">
+            <form class="signup" [formGroup]="logIN" (ngSubmit)="onLogIn()">
+                <div class="field">
+                    <input type="text" id="inputEmail4" placeholder="Enter Username" formControlName="userName">
+                    <span style="color:red;"
+                        *ngIf="logIN.controls['userName'] && logIN.controls['userName'].invalid && logIN.controls['userName'].touched">*Fields
+                        are required</span>
+                </div>
+                <div class="field">
+                    <input type="password" id="inputPassword4" placeholder="Enter Password" formControlName="password">
+                    <span style="color:red;"
+                        *ngIf="logIN.controls['password'] && logIN.controls['password'].invalid && logIN.controls['password'].touched">*Fields
+                        are required</span>
+                </div> <br>
+                <div class="field-sign">
+                    <input type="submit" class="text-white" value="Login">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="login-container mt-5">
+    <div class="container">
+        <form class="row g-3 mt-3" [formGroup]="logIN" (ngSubmit)="onLogIn()">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="inputUsername" class="form-label fs-5">Username</label>
+                    <input type="text" class="form-control" id="inputEmail4" formControlName="userName">
+                    <span style="color:red;"
+                        *ngIf="logIN.controls['userName'] && logIN.controls['userName'].invalid && logIN.controls['userName'].touched">*Fields
+                        are required</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label fs-5">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" formControlName="password">
+                    <span style="color:red;"
+                        *ngIf="logIN.controls['password'] && logIN.controls['password'].invalid && logIN.controls['password'].touched">*Fields
+                        are required</span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6 mt-3">
+                    <button type="submit" class="btn btn-success">Log In</button>
+                </div>
+            </div>
+        </form>
+    </div> -->

@@ -1,0 +1,91 @@
+<div class="wrapper mt-2">
+    <div class="title-text">
+        <div class="title signup">Signup Form</div>
+    </div>
+    <div class="form-container">
+        <div class="slide-controls">
+            <label for="signup" class="slide signup text-white">Signup Details</label>
+        </div>
+        <div class="form-inner">
+            <form class="signup" [formGroup]="signUp">
+                <div class="field">
+                    <input type="text" class="form-control" id="inputUsername" placeholder="Enter Username"
+                        formControlName="userName">
+                    <span style="color: red;" *ngIf="userName && userName.invalid && userName.touched">*This field is
+                        Required</span>
+                </div>
+                <div class="field">
+                    <input type="text" class="form-control" id="inputName" placeholder="Enter Name" formControlName="name">
+                <span style="color: red;" *ngIf="name && name.invalid && name.touched">*This field is Required</span>
+                </div>
+                <div class="field">
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Email" formControlName="email">
+                <span style="color: red;" *ngIf="email && email.invalid && email.touched">*This field is Required</span>
+                </div>
+                <div class="field">
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Enter Password" formControlName="password">
+                <span style="color: red;" *ngIf="password && password.invalid && password.touched">*This field is Required</span>
+                </div>
+                <div class="field">
+                    <input type="text" class="form-control" id="inputCountry" placeholder="Enter Country" formControlName="country">
+                <span style="color: red;" *ngIf="country && country.invalid && country.touched">*This field is Required</span>
+                </div>
+                <div class="field">
+                    <input type="text" class="form-control" id="inputCity" placeholder="Enter City" formControlName="city">
+                <span style="color: red;" *ngIf="city && city.invalid && city.touched">*This field is Required</span>
+                </div><br>
+                <div class="field-sign">
+                    <input type="submit" class="text-white" value="Signup" (click)="onSignUp()">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div class="signup-container mb-5">
+    <div class="container mt-3">
+        <form class="row g-3 mt-3" [formGroup]="signUp" >
+            <div class="col-md-4">
+                <label for="inputUsername" class="form-label fs-5">Username</label>
+                <input type="text" class="form-control" id="inputUsername" formControlName="userName">
+                <span style="color: red;" *ngIf="userName && userName.invalid && userName.touched">*This field is Required</span>
+            </div>
+            <div class="col-md-4">
+                <label for="inputName" class="form-label fs-5">Name</label>
+                <input type="text" class="form-control" id="inputName" formControlName="name">
+                <span style="color: red;" *ngIf="name && name.invalid && name.touched">*This field is Required</span>
+            </div>
+            <div class="col-md-4">
+                <label for="inputEmail4" class="form-label fs-5">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" formControlName="email">
+                <span style="color: red;" *ngIf="email && email.invalid && email.touched">*This field is Required</span>
+            </div>
+            <div class="col-md-4">
+                <label for="inputPassword4" class="form-label fs-5">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" formControlName="password">
+                <span style="color: red;" *ngIf="password && password.invalid && password.touched">*This field is Required</span>
+            </div>
+            <div class="col-md-4">
+                <label for="inputCountry" class="form-label fs-5">Country</label>
+                <input type="text" class="form-control" id="inputCountry" formControlName="country">
+                <span style="color: red;" *ngIf="country && country.invalid && country.touched">*This field is Required</span>
+            </div>
+            <div class="col-md-4">
+                <label for="inputCity" class="form-label fs-5">City</label>
+                <input type="text" class="form-control" id="inputCity" formControlName="city">
+                <span style="color: red;" *ngIf="city && city.invalid && city.touched">*This field is Required</span>
+            </div>
+            <div class="col-md-4">
+                <label for="inputZip" class="form-label fs-5">Zip</label>
+                <input type="text" class="form-control" id="inputZip" formControlName="zip">
+                <span style="color: red;" *ngIf="zip && zip.invalid && zip.touched">*This field is Required</span>
+            </div>
+            <div class="col-12 mb-3">
+                <button type="button" class="btn btn-success" (click)="onSignUp()">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div> -->
