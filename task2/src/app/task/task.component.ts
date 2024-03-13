@@ -204,7 +204,7 @@ export class TaskComponent {
     ]
 
   addUser:any= new FormGroup({
-    id: new FormControl(this.employees.length+1,[Validators.required]),
+    id: new FormControl(this.employees.length+1),
     name: new FormControl('',[Validators.required]),
     email: new FormControl('',[Validators.required,Validators.email]),
     age: new FormControl('',[Validators.required]),
